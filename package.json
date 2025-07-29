@@ -3,17 +3,19 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "install": "bun install",
     "dev": "bun run --hot src/index.tsx",
     "test": "bun test src"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "^1.2.19",
+    "drizzle-kit": "^0.31.4"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "dotenv": "^17.2.1",
+    "drizzle-orm": "^0.44.4",
     "hono": "^4.8.10"
   }
 }
