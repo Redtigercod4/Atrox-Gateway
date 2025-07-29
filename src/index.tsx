@@ -1,8 +1,11 @@
 import { Hono } from 'hono';
+import Dashboard from './pages/Dashboard';
 
 const app = new Hono();
 
-app.get('/', (c) => c.text('Hello Bun!'))
+app.get('/', (c) => {
+    return c.html(<Dashboard />)
+})
 
 export default {
     port: 3000,
