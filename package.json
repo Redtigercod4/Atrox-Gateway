@@ -1,0 +1,19 @@
+{
+  "name": "atrox-gateway",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "install": "bun install",
+    "dev": "bun run --hot src/index.ts",
+    "test": "bun test src"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "hono": "^4.8.10"
+  }
+}
