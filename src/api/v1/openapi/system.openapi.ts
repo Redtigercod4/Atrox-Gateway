@@ -7,9 +7,17 @@ export const healthCheckDoc = describeRoute({
       description: "Successful response",
       content: {
         "application/json": {
-          schema: { type: "string" },
+          schema: {
+            type: "object",
+            properties: {
+              uptime: { type: "string" },
+              message: { type: "string" },
+              timestamp: { type: "string", format: "date-time" },
+            },
+          },
         },
       },
     },
   },
+  tags: ["System"],
 });
