@@ -9,3 +9,4 @@ export default defineConfig({
     url: getDatabaseConnection(),
   },
 });
+
