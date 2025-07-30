@@ -20,3 +20,10 @@ export const session = sqliteTable("app_metadata", {
   enabled: int().default(1),
   created_at: int({ mode: "timestamp" }),
 });
+
+export const settings = sqliteTable("settings", {
+  id: int().primaryKey({ autoIncrement: true }),
+  gateway_name: text().notNull().unique(),
+  domain_name: text().notNull().unique(),
+  created_at: int({ mode: "timestamp" }),
+});

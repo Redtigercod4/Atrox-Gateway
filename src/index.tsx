@@ -10,6 +10,17 @@ import v1 from "./api/v1";
 
 // UI Pages
 import Dashboard from "./pages/Dashboard";
+import { applyMigrations, checkDbConnection } from "./database/datastore";
+
+const startup = async (): Promise<void> => {
+  console.log("Running startup checks...");
+  checkDbConnection();
+  applyMigrations();
+
+  console.log("Startup checks complete.");
+};
+
+await startup();
 
 const app = new Hono();
 
